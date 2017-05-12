@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Fake SSO Login</h2>
+
+@using (Html.BeginForm("Login", "FakeSSO", FormMethod.Post))
+{
+    <p>Username</p>
+    <input name="username" type="text" />
+    <p>Password</p>
+    <input name="password" type="password" />
+    <br />
+    <input type="hidden" name="returnUrl" value="@ViewBag.ReturnUrl" />
+    <br />
+    <input class="btn btn-primary" value="Login" type="submit" />
+}
