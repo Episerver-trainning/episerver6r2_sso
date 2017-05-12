@@ -6,9 +6,9 @@ namespace FakeSSO.App.Controllers
 {
     public class FakeSSOController : Controller
     {
-        static ConcurrentDictionary<string, string> dicAccessKey = new ConcurrentDictionary<string, string>();
+        static ConcurrentDictionary<string, string> dicAuthorizationCodes = new ConcurrentDictionary<string, string>();
 
-        static ConcurrentDictionary<string, string> dicUserInfomations = new ConcurrentDictionary<string, string>();
+        static ConcurrentDictionary<string, string> dicAccessTokens = new ConcurrentDictionary<string, string>();
 
         const string _ROLES = "WebAdmins,WebEditors";
 
@@ -25,19 +25,28 @@ namespace FakeSSO.App.Controllers
             // Do the verify username and password here.
 
             // Generate authorization code here.
-            var guid = Guid.NewGuid().ToString();
-            dicAccessKey.TryAdd(guid, _ROLES);
-
-            returnUrl = $"{returnUrl}?code={guid}";
+            var code = Guid.NewGuid().ToString();
+            dicAuthorizationCodes.TryAdd(code, username);
+            
+            returnUrl = $"{returnUrl}&code={code}";
 
             return Redirect(returnUrl);
         }
 
         public string GetAcessToken(string code)
         {
-            var roles = dicAccessKey[code];
+            var userName = dicAuthorizationCodes[code];
 
-            return roles;
+            var accessToken = Guid.NewGuid().ToString();
+            dicAccessTokens.TryAdd(accessToken, userName);
+
+            return accessToken;
+        }
+
+        public string GetUserInfomation(string accessToken)
+        {
+            var userName = dicAccessTokens[accessToken];
+            return $"{userName},{_ROLES}";
         }
     }
 }
