@@ -1,0 +1,1138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{86592C94-5E09-417B-B1E2-AFDB757B24D4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EPiServer</RootNamespace>
+    <AssemblyName>EPiServer.Templates.AlloyTech</AssemblyName>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRules>-Microsoft.Design#CA1020</CodeAnalysisRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>References\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Templates\AlloyTech\Pages\Page.aspx" />
+    <Content Include="Templates\AlloyTech\Pages\Search.aspx" />
+    <Content Include="Templates\AlloyTech\Pages\XForm.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\Core\CollectionChangedEventArgs.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\Configuration\FileManagerSection.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\Configuration\RegionDefinition.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\Configuration\RegionElement.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\Configuration\RegionElementCollection.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\Configuration\ViewElement.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\Configuration\ViewElementCollection.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\ContentUserControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\Core\EventDrivenCollection.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\FileManagerCommandEventArgs.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\FileManagerCommandName.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\FileSystemExceptions.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\FileSystemUtility.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\IFileManagerRegion.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\Validate.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\VirtualFileBaseCollection.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\WebControls\FileManagerControl.cs" />
+    <Compile Include="Templates\Advanced\FileManager\Core\WebControls\Region.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates\Advanced\PageProviders\ExcelPageProvider.cs" />
+    <Compile Include="Templates\Advanced\PageProviders\ExcelParser.cs" />
+    <Compile Include="Templates\Advanced\PageProviders\ExcelParserException.cs" />
+    <Compile Include="Templates\AlloyTech\Blog\BlogUtility.cs" />
+    <Compile Include="Templates\AlloyTech\Blog\Pages\BlogPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Pages\Item.aspx.cs">
+      <DependentUpon>Item.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Pages\Item.aspx.designer.cs">
+      <DependentUpon>Item.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Pages\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Pages\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Pages\PersonalStart.aspx.cs">
+      <DependentUpon>PersonalStart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Pages\PersonalStart.aspx.designer.cs">
+      <DependentUpon>PersonalStart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Pages\TeamStart.aspx.cs">
+      <DependentUpon>TeamStart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Pages\TeamStart.aspx.designer.cs">
+      <DependentUpon>TeamStart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\PropertyBlogTags.cs" />
+    <Compile Include="Templates\AlloyTech\Blog\PropertyControls\PropertyBlogTagsControl.cs" />
+    <Compile Include="Templates\AlloyTech\Blog\TagStatisticsUpdater.cs" />
+    <Compile Include="Templates\AlloyTech\Blog\Units\DateTree.ascx.cs">
+      <DependentUpon>DateTree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Units\DateTree.ascx.designer.cs">
+      <DependentUpon>DateTree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Units\ItemSummary.ascx.cs">
+      <DependentUpon>ItemSummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Units\ItemSummary.ascx.designer.cs">
+      <DependentUpon>ItemSummary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Units\SecondaryList.ascx.cs">
+      <DependentUpon>SecondaryList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Units\SecondaryList.ascx.designer.cs">
+      <DependentUpon>SecondaryList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Units\TagCloud.ascx.cs">
+      <DependentUpon>TagCloud.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Blog\Units\TagCloud.ascx.designer.cs">
+      <DependentUpon>TagCloud.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\StringExtensions.cs" />
+    <Compile Include="Templates\AlloyTech\DateTimeExtensions.cs" />
+    <Compile Include="Templates\AlloyTech\DynamicContent\Map.ascx.cs">
+      <DependentUpon>Map.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\DynamicContent\Map.ascx.designer.cs">
+      <DependentUpon>Map.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\DynamicContent\MapContentValue.cs" />
+    <Compile Include="Templates\AlloyTech\DynamicContent\MapDynamicContent.cs" />
+    <Compile Include="Templates\AlloyTech\DynamicContent\MapDynamicContentConfiguration.cs" />
+    <Compile Include="Templates\AlloyTech\DynamicContent\MapEdit.ascx.cs">
+      <DependentUpon>MapEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\DynamicContent\MapEdit.ascx.designer.cs">
+      <DependentUpon>MapEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\AddFile.ascx.cs">
+      <DependentUpon>AddFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\AddFile.ascx.designer.cs">
+      <DependentUpon>AddFile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\CheckInFile.ascx.cs">
+      <DependentUpon>CheckInFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\CheckInFile.ascx.designer.cs">
+      <DependentUpon>CheckInFile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\DefaultView.ascx.cs">
+      <DependentUpon>DefaultView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\DefaultView.ascx.designer.cs">
+      <DependentUpon>DefaultView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\Delete.ascx.cs">
+      <DependentUpon>Delete.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\Delete.ascx.designer.cs">
+      <DependentUpon>Delete.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\EditCustomFileSummary.ascx.cs">
+      <DependentUpon>EditCustomFileSummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\EditCustomFileSummary.ascx.designer.cs">
+      <DependentUpon>EditCustomFileSummary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\EditUnifiedSummary.ascx.cs">
+      <DependentUpon>EditUnifiedSummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\EditUnifiedSummary.ascx.designer.cs">
+      <DependentUpon>EditUnifiedSummary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\FileList.ascx.cs">
+      <DependentUpon>FileList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\FileList.ascx.designer.cs">
+      <DependentUpon>FileList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\HeadingContent.ascx.cs">
+      <DependentUpon>HeadingContent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\HeadingContent.ascx.designer.cs">
+      <DependentUpon>HeadingContent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\RenameAndCreateFolder.ascx.cs">
+      <DependentUpon>RenameAndCreateFolder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\RenameAndCreateFolder.ascx.designer.cs">
+      <DependentUpon>RenameAndCreateFolder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\SwitchViewContent.ascx.cs">
+      <DependentUpon>SwitchViewContent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\SwitchViewContent.ascx.designer.cs">
+      <DependentUpon>SwitchViewContent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\VersionList.ascx.cs">
+      <DependentUpon>VersionList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\VersionList.ascx.designer.cs">
+      <DependentUpon>VersionList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\ViewFileSummary.ascx.cs">
+      <DependentUpon>ViewFileSummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\FileManager\ViewFileSummary.ascx.designer.cs">
+      <DependentUpon>ViewFileSummary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Forum\Core\ForumPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Forum\Core\Manager.cs" />
+    <Compile Include="Templates\AlloyTech\Forum\Pages\Forum.aspx.cs">
+      <DependentUpon>Forum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Forum\Pages\Forum.aspx.designer.cs">
+      <DependentUpon>Forum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Forum\Pages\Post.aspx.cs">
+      <DependentUpon>Post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Forum\Pages\Post.aspx.designer.cs">
+      <DependentUpon>Post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Forum\Pages\Thread.aspx.cs">
+      <DependentUpon>Thread.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Forum\Pages\Thread.aspx.designer.cs">
+      <DependentUpon>Thread.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\MasterPages\MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\MasterPages\MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\ChangedPages.aspx.cs">
+      <DependentUpon>ChangedPages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\ChangedPages.aspx.designer.cs">
+      <DependentUpon>ChangedPages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Events.aspx.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Events.aspx.designer.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Listing.aspx.cs">
+      <DependentUpon>Listing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Listing.aspx.designer.cs">
+      <DependentUpon>Listing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\PersonalSettings.aspx.cs">
+      <DependentUpon>PersonalSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\PersonalSettings.aspx.designer.cs">
+      <DependentUpon>PersonalSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Reseller.aspx.cs">
+      <DependentUpon>Reseller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Reseller.aspx.designer.cs">
+      <DependentUpon>Reseller.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\Captcha.ascx.cs">
+      <DependentUpon>Captcha.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\Captcha.ascx.designer.cs">
+      <DependentUpon>Captcha.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\CaptchaImageHandler.ashx.cs">
+      <DependentUpon>CaptchaImageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\CaptchaSecurity.cs" />
+    <Compile Include="Templates\AlloyTech\Units\Placeable\ChangedPages.ascx.cs">
+      <DependentUpon>ChangedPages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\ChangedPages.ascx.designer.cs">
+      <DependentUpon>ChangedPages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Units\CreatePageBox.ascx.cs">
+      <DependentUpon>CreatePageBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Units\CreatePageBox.ascx.designer.cs">
+      <DependentUpon>CreatePageBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\DateTimePicker.ascx.cs">
+      <DependentUpon>DateTimePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\DateTimePicker.ascx.designer.cs">
+      <DependentUpon>DateTimePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\Document.ascx.cs">
+      <DependentUpon>Document.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\Document.ascx.designer.cs">
+      <DependentUpon>Document.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\EventLocation.ascx.cs">
+      <DependentUpon>EventLocation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\EventLocation.ascx.designer.cs">
+      <DependentUpon>EventLocation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\FileList.ascx.cs">
+      <DependentUpon>FileList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\FileList.ascx.designer.cs">
+      <DependentUpon>FileList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\Flash.ascx.cs">
+      <DependentUpon>Flash.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\Flash.ascx.designer.cs">
+      <DependentUpon>Flash.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\MainBody.ascx.cs">
+      <DependentUpon>MainBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\MainBody.ascx.designer.cs">
+      <DependentUpon>MainBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\PageList.ascx.cs">
+      <DependentUpon>PageList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\PageList.ascx.designer.cs">
+      <DependentUpon>PageList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\PersonalSettings.ascx.cs">
+      <DependentUpon>PersonalSettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\PersonalSettings.ascx.designer.cs">
+      <DependentUpon>PersonalSettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\TinyMCETextEditor.ascx.cs">
+      <DependentUpon>TinyMCETextEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\TinyMCETextEditor.ascx.designer.cs">
+      <DependentUpon>TinyMCETextEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\XForm.ascx.cs">
+      <DependentUpon>XForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Placeable\XForm.ascx.designer.cs">
+      <DependentUpon>XForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\Breadcrumbs.cs" />
+    <Compile Include="Templates\AlloyTech\Units\Static\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\MainMenu.ascx.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\MainMenu.ascx.designer.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\PageFooter.ascx.cs">
+      <DependentUpon>PageFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\PageFooter.ascx.designer.cs">
+      <DependentUpon>PageFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\PageHeader.ascx.cs">
+      <DependentUpon>PageHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\PageHeader.ascx.designer.cs">
+      <DependentUpon>PageHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\QuickSearch.ascx.cs">
+      <DependentUpon>QuickSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\QuickSearch.ascx.designer.cs">
+      <DependentUpon>QuickSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\Submenu.ascx.cs">
+      <DependentUpon>Submenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\Submenu.ascx.designer.cs">
+      <DependentUpon>Submenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Core\EPiCheckBox.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\EPiRadioButton.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\InvitationTicket.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\Membership.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\MembershipEntry.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\MembershipLevels.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\MembershipSearch.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\Notification\EmailCreator.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\Notification\EmailVariableSet.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\Notification\ExistingUserInvitationCreator.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\Notification\InvitationSender.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\Notification\MembershipStatusChangeNotificationCreator.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\Notification\MembershipStatusChangeNotificationSender.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\Notification\NewUserInvitationCreator.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\Notification\NotificationSender.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\Notification\RemoveMemberNotificationCreator.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Core\WorkroomPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\CalendarEvent.aspx.cs">
+      <DependentUpon>CalendarEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\CalendarEvent.aspx.designer.cs">
+      <DependentUpon>CalendarEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\CalendarList.aspx.cs">
+      <DependentUpon>CalendarList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\CalendarList.aspx.designer.cs">
+      <DependentUpon>CalendarList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\FileManager.aspx.cs">
+      <DependentUpon>FileManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\FileManager.aspx.designer.cs">
+      <DependentUpon>FileManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\MembershipManager.aspx.cs">
+      <DependentUpon>MembershipManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\MembershipManager.aspx.designer.cs">
+      <DependentUpon>MembershipManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\NewsListPage.aspx.cs">
+      <DependentUpon>NewsListPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\NewsListPage.aspx.designer.cs">
+      <DependentUpon>NewsListPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\NewsRoot.aspx.cs">
+      <DependentUpon>NewsRoot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\NewsRoot.aspx.designer.cs">
+      <DependentUpon>NewsRoot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\NotificationEmail.aspx.cs">
+      <DependentUpon>NotificationEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\NotificationEmail.aspx.designer.cs">
+      <DependentUpon>NotificationEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\Start.aspx.cs">
+      <DependentUpon>Start.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\Start.aspx.designer.cs">
+      <DependentUpon>Start.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\WorkroomList.aspx.cs">
+      <DependentUpon>WorkroomList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Pages\WorkroomList.aspx.designer.cs">
+      <DependentUpon>WorkroomList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Units\CalendarList.ascx.cs">
+      <DependentUpon>CalendarList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Units\CalendarList.ascx.designer.cs">
+      <DependentUpon>CalendarList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Units\ChangeVisiblePages.ascx.cs">
+      <DependentUpon>ChangeVisiblePages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Units\ChangeVisiblePages.ascx.designer.cs">
+      <DependentUpon>ChangeVisiblePages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Units\EditableContent.ascx.cs">
+      <DependentUpon>EditableContent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Units\EditableContent.ascx.designer.cs">
+      <DependentUpon>EditableContent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Units\EventList.cs" />
+    <Compile Include="Templates\Advanced\Workroom\Units\FileList.ascx.cs">
+      <DependentUpon>FileList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Units\FileList.ascx.designer.cs">
+      <DependentUpon>FileList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Units\MembershipAdministration.ascx.cs">
+      <DependentUpon>MembershipAdministration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Units\MembershipAdministration.ascx.designer.cs">
+      <DependentUpon>MembershipAdministration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Units\NewsList.ascx.cs">
+      <DependentUpon>NewsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Advanced\Workroom\Units\NewsList.ascx.designer.cs">
+      <DependentUpon>NewsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\PageDataExtensions.cs" />
+    <Compile Include="Templates\AlloyTech\Pages\Document.aspx.cs">
+      <DependentUpon>Document.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Document.aspx.designer.cs">
+      <DependentUpon>Document.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\NewsItem.aspx.cs">
+      <DependentUpon>NewsItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\NewsItem.aspx.designer.cs">
+      <DependentUpon>NewsItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Page.aspx.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Page.aspx.designer.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\RssFeed.aspx.cs">
+      <DependentUpon>RssFeed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\RssFeed.aspx.designer.cs">
+      <DependentUpon>RssFeed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\SiteMap.aspx.cs">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\SiteMap.aspx.designer.cs">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\SubscriptionPage.aspx.cs">
+      <DependentUpon>SubscriptionPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\SubscriptionPage.aspx.designer.cs">
+      <DependentUpon>SubscriptionPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\XForm.aspx.cs">
+      <DependentUpon>XForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Pages\XForm.aspx.designer.cs">
+      <DependentUpon>XForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\ChangePassword.ascx.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\ChangePassword.ascx.designer.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\ForgotPassword.ascx.cs">
+      <DependentUpon>ForgotPassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AlloyTech\Units\Static\ForgotPassword.ascx.designer.cs">
+      <DependentUpon>ForgotPassword.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\AlloyTech\Pages\Login.aspx" />
+    <Content Include="Templates\AlloyTech\Pages\NewsItem.aspx" />
+    <Content Include="Templates\AlloyTech\Pages\RssFeed.aspx" />
+    <Content Include="Templates\AlloyTech\Pages\SiteMap.aspx" />
+    <Content Include="Templates\AlloyTech\Pages\SubscriptionPage.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\AlloyTech\Pages\Document.aspx" />
+    <Content Include="Templates\AlloyTech\Pages\Register.aspx" />
+    <Content Include="Templates\AlloyTech\Units\Static\ChangePassword.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Static\ForgotPassword.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\AlloyTech\Blog\Pages\Item.aspx" />
+    <Content Include="Templates\AlloyTech\Blog\Pages\List.aspx" />
+    <Content Include="Templates\AlloyTech\Blog\Pages\PersonalStart.aspx" />
+    <Content Include="Templates\AlloyTech\Blog\Pages\TeamStart.aspx" />
+    <Content Include="Templates\AlloyTech\Blog\Units\DateTree.ascx" />
+    <Content Include="Templates\AlloyTech\Blog\Units\ItemSummary.ascx" />
+    <Content Include="Templates\AlloyTech\Blog\Units\SecondaryList.ascx" />
+    <Content Include="Templates\AlloyTech\Blog\Units\TagCloud.ascx" />
+    <Content Include="Templates\AlloyTech\DynamicContent\Map.ascx" />
+    <Content Include="Templates\AlloyTech\DynamicContent\MapEdit.ascx" />
+    <Content Include="Templates\Advanced\FileManager\AddFile.ascx" />
+    <Content Include="Templates\Advanced\FileManager\CheckInFile.ascx" />
+    <Content Include="Templates\Advanced\FileManager\DefaultView.ascx" />
+    <Content Include="Templates\Advanced\FileManager\Delete.ascx" />
+    <Content Include="Templates\Advanced\FileManager\EditCustomFileSummary.ascx" />
+    <Content Include="Templates\Advanced\FileManager\EditUnifiedSummary.ascx" />
+    <Content Include="Templates\Advanced\FileManager\FileList.ascx" />
+    <Content Include="Templates\Advanced\FileManager\HeadingContent.ascx" />
+    <Content Include="Templates\Advanced\FileManager\RenameAndCreateFolder.ascx" />
+    <Content Include="Templates\Advanced\FileManager\SwitchViewContent.ascx" />
+    <Content Include="Templates\Advanced\FileManager\VersionList.ascx" />
+    <Content Include="Templates\Advanced\FileManager\ViewFileSummary.ascx" />
+    <Content Include="Templates\AlloyTech\Forum\Pages\Forum.aspx" />
+    <Content Include="Templates\AlloyTech\Forum\Pages\Post.aspx" />
+    <Content Include="Templates\AlloyTech\Forum\Pages\Thread.aspx" />
+    <Content Include="Templates\AlloyTech\Pages\Calendar.aspx" />
+    <Content Include="Templates\AlloyTech\Pages\ChangedPages.aspx" />
+    <Content Include="Templates\AlloyTech\Pages\Listing.aspx" />
+    <Content Include="Templates\AlloyTech\Pages\PersonalSettings.aspx" />
+    <Content Include="Templates\AlloyTech\Pages\Reseller.aspx" />
+    <Content Include="Templates\AlloyTech\Scripts\AlloyTech.js" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\222222_11x11_icon_arrows_leftright.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\222222_11x11_icon_arrows_updown.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\222222_11x11_icon_doc.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\222222_11x11_icon_minus.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\222222_11x11_icon_plus.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\222222_11x11_icon_resize_se.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\222222_7x7_arrow_down.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\222222_7x7_arrow_left.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\222222_7x7_arrow_right.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\222222_7x7_arrow_up.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\eeeeee_40x100_textures_03_highlight_soft_100.png" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\ef8c08_11x11_icon_arrows_leftright.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\ef8c08_11x11_icon_arrows_updown.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\ef8c08_11x11_icon_close.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\ef8c08_11x11_icon_doc.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\ef8c08_11x11_icon_folder_closed.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\ef8c08_11x11_icon_folder_open.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\ef8c08_11x11_icon_minus.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\ef8c08_11x11_icon_plus.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\ef8c08_7x7_arrow_down.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\ef8c08_7x7_arrow_left.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\ef8c08_7x7_arrow_right.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\ef8c08_7x7_arrow_up.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\f6f6f6_40x100_textures_02_glass_100.png" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\fdf5ce_40x100_textures_02_glass_100.png" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\images\ffffff_40x100_textures_02_glass_65.png" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\MIT-LICENSE.txt" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\ui.datepicker-sv.js" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\jquery.ui.datepicker.custom.theme.css" />
+    <Content Include="Templates\AlloyTech\Scripts\MapContent.js" />
+    <Content Include="Templates\AlloyTech\Scripts\slideshow.swf" />
+    <Content Include="Templates\AlloyTech\Scripts\swfobject.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\jquery.tinymce.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\langs\en.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\langs\sv.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\license.txt" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\safari\blank.htm" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\safari\editor_plugin.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\safari\editor_plugin_src.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\langs\sv_dlg.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\row.htm" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\plugins\table\table.htm" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\langs\sv.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\langs\sv_dlg.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\tiny_mce.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\tiny_mce_src.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\utils\editable_selects.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\utils\form_utils.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\utils\mctabs.js" />
+    <Content Include="Templates\AlloyTech\Scripts\tiny_mce\utils\validate.js" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Editor.css" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Add.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\BodyBg.jpg" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\ButtonBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\ButtonLanguage.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\ButtonLogin.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\ButtonRss.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\ButtonSitemap.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Clock.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\DefaultBullet.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Delete.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Edit.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\bmp.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\default.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\doc.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\gif.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\htm.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\jpg.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\mp3.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\mpg.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\pdf.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\png.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\ppt.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\tif.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\txt.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\wav.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\xls.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\extensions\zip.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\Ascending.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonAddFile_dis.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonAddFile_off.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonAddFile_on.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonAddFolder_dis.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonAddFolder_off.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonAddFolder_on.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonCheckIn_dis.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonCheckIn_off.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonCheckIn_on.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonCheckOut_dis.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonCheckOut_off.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonCheckOut_on.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonCopy_dis.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonCopy_off.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonCopy_on.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonCut_dis.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonCut_off.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonCut_on.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonDelete_dis.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonDelete_off.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonDelete_on.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonDetails_dis.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonDetails_off.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonDetails_on.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonPaste_dis.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonPaste_off.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonPaste_on.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonRename_dis.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonRename_off.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonRename_on.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonUndoCheckOut_dis.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonUndoCheckOut_off.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonUndoCheckOut_on.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonVersion_dis.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonVersion_off.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\ButtonVersion_on.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\Descending.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\Folder.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Filemanager\FolderUp.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\FooterBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\forum\Auction.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\forum\Bomb.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\forum\Default.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\forum\Information.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\forum\Lock.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\forum\ReplyBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\forum\Sticky.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\forum\StickyLocked.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\forum\Up.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\FrontBodyAreaBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\FrontBullet.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\FrontLinksAreaBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\FrontTextAreaBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\FrontTextAreaBottom.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\gmaps-marker-orange.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\HeaderBg.jpg" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\Invite.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\MainMenuBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\MainMenuDivider.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\MainMenuHoverBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\MainMenuLeft.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\MainMenuSearchButton.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\MainMenuSelectedBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\MainMenuSelectedLeft.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\PageMainBodyBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\PageMainBodyColumnBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\PageMainBodyWideBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\PageSecondaryBodyBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\SitemapBullet.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\SubMenuBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\SubMenuItemBg.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\SubMenuSelected.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\SubMenuTopSelected.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\box-header.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\box-news.jpg" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\box-startpage.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\field-search.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\hover.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\icon-language.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\icon-login.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\icon-rss.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\icon-sitemap.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\selected.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\tile-button.jpg" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\tile-footer.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Styles.css" />
+    <Content Include="Templates\AlloyTech\Units\Placeable\Captcha.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Placeable\ChangedPages.ascx" />
+    <Content Include="Templates\Advanced\Workroom\Units\CreatePageBox.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Placeable\DateTimePicker.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Placeable\Flash.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Placeable\PageList.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Placeable\PersonalSettings.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Placeable\TinyMCETextEditor.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Static\Header.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Static\PageFooter.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Static\PageHeader.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Static\QuickSearch.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Static\Submenu.ascx" />
+    <Content Include="Templates\Advanced\Workroom\Pages\Calendar.aspx" />
+    <Content Include="Templates\Advanced\Workroom\Pages\CalendarEvent.aspx" />
+    <Content Include="Templates\Advanced\Workroom\Pages\CalendarList.aspx" />
+    <Content Include="Templates\Advanced\Workroom\Pages\FileManager.aspx" />
+    <Content Include="Templates\Advanced\Workroom\Pages\MembershipManager.aspx" />
+    <Content Include="Templates\Advanced\Workroom\Pages\NewsListPage.aspx" />
+    <Content Include="Templates\Advanced\Workroom\Pages\NewsRoot.aspx" />
+    <Content Include="Templates\Advanced\Workroom\Pages\NotificationEmail.aspx" />
+    <Content Include="Templates\Advanced\Workroom\Pages\Settings.aspx" />
+    <Content Include="Templates\Advanced\Workroom\Pages\Start.aspx" />
+    <Content Include="Templates\Advanced\Workroom\Pages\UserProfile.aspx" />
+    <Content Include="Templates\Advanced\Workroom\Pages\WorkroomList.aspx" />
+    <Content Include="Templates\Advanced\Workroom\Units\CalendarList.ascx" />
+    <Content Include="Templates\Advanced\Workroom\Units\ChangeVisiblePages.ascx" />
+    <Content Include="Templates\Advanced\Workroom\Units\EditableContent.ascx" />
+    <Content Include="Templates\Advanced\Workroom\Units\FileList.ascx" />
+    <Content Include="Templates\Advanced\Workroom\Units\MembershipAdministration.ascx" />
+    <Content Include="Templates\Advanced\Workroom\Units\NewsList.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="episerver.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="EPiServerFramework.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="connectionStrings.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="lang\AlloyTech_DA.xml" />
+    <Content Include="lang\AlloyTech_DE.xml" />
+    <Content Include="lang\AlloyTech_EN.xml" />
+    <Content Include="lang\AlloyTech_ES.xml" />
+    <Content Include="lang\AlloyTech_FI.xml" />
+    <Content Include="lang\AlloyTech_FR.xml" />
+    <Content Include="lang\AlloyTech_JA.xml" />
+    <Content Include="lang\AlloyTech_NL.xml" />
+    <Content Include="lang\AlloyTech_NO.xml" />
+    <Content Include="lang\AlloyTech_PT.xml" />
+    <Content Include="lang\AlloyTech_SV.xml" />
+    <Content Include="lang\AlloyTech_ZH.xml" />
+    <Content Include="lang\newtext_AlloyTech.xml" />
+    <EmbeddedResource Include="Templates\Advanced\FileManager\views.config" />
+    <None Include="References\DocumentFormat.OpenXml.dll" />
+    <Content Include="Templates\Advanced\Workroom\Styles\WRStyles.css" />
+    <Content Include="Templates\AlloyTech\MasterPages\MasterPage.master" />
+    <Content Include="Templates\AlloyTech\Pages\Events.aspx" />
+    <Content Include="Templates\AlloyTech\Scripts\DateTimePicker.js" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\jquery-1.4.4-vsdoc.js" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\jquery-1.4.4.min.js" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\jquery-ui-1.8.7.custom.min.js" />
+    <Content Include="Templates\AlloyTech\Scripts\jquery\jquery.ui.datepicker.custom.js" />
+    <Content Include="Templates\AlloyTech\Scripts\Mobile\Mobile.js" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\box-mainbody-wide.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\PageBg.jpg" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\searchbutton.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\StartPageBg.jpg" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\box-header.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\box-mainbody.png" />
+    <Content Include="Templates\AlloyTech\Styles\Default\Images\box-startpage.gif" />
+    <Content Include="Templates\AlloyTech\Styles\Mobile\Images\MenuCircle.png" />
+    <Content Include="Templates\AlloyTech\Styles\Mobile\Styles.css" />
+    <Content Include="Templates\AlloyTech\Styles\Print\Styles.css" />
+    <Content Include="Templates\AlloyTech\Units\Placeable\CaptchaImageHandler.ashx" />
+    <Content Include="Templates\AlloyTech\Units\Placeable\Document.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Placeable\EventLocation.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Placeable\FileList.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Placeable\MainBody.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Placeable\XForm.ascx" />
+    <Content Include="Templates\AlloyTech\Units\Static\MainMenu.ascx" />
+    <Content Include="Templates\Advanced\Workroom\Styles\Images\Workroom_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Templates\Advanced\PageProviders\ExcelPageProviderSource.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Templates\Advanced\Workroom\Scripts\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <RootPath Condition="'$(RootPath)' == ''">$(MSBuildProjectDirectory)\..\..</RootPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="BeforeBuild">
+    <ItemGroup>
+      <CustomAdditionalCompileInputs Include="@(EPiServerDataFiles);@(EPiServerDataFiles);@(AppBrowserFiles);@(SiteBinFiles);@(RecursiveMarkup)" />
+    </ItemGroup>
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <IISUrl>http://win-ccsid4dubpn:17001/</IISUrl>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Reference Include="EPiServer">
+      <HintPath>bin\EPiServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.BaseLibrary">
+      <HintPath>bin\EPiServer.BaseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Configuration">
+      <HintPath>bin\EPiServer.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Web.WebControls">
+      <HintPath>bin\EPiServer.Web.WebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.XForms">
+      <HintPath>bin\EPiServer.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Data">
+      <HintPath>bin\EPiServer.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Framework">
+      <HintPath>bin\EPiServer.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Shell">
+      <HintPath>bin\EPiServer.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup>
+    <!-- Even if this project is up to date we need to make sure that any changed "runtime files" are copied to the site -->
+    <BuildDependsOnWhenUpToDate>AfterBuild</BuildDependsOnWhenUpToDate>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\UpToDateCheck.targets" Condition="Exists('$(MSBuildExtensionsPath32)\UpToDateCheck.targets')" />
+</Project>

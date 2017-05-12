@@ -1,0 +1,1873 @@
+/************************/
+/* GLOBAL               */
+/************************/
+:root {
+    overflow-y: scroll;
+}
+html, body {
+    height: 100%;
+}
+body {
+    background-color: #2986C3;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #666;
+    margin: 0;
+    padding: 0;
+}
+form {
+    padding: 0;
+    margin: 0;
+    background: #fff url(Images/PageBg.jpg) repeat-x;   
+    min-width: 980px; /* Ensures that background covers the whole document width */
+}
+a {
+    color: #398ac9;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a img {
+    border: 0;
+}
+h1, h2, h3, h4 {
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: normal;
+    margin: 0 0 .5em;
+}
+h1 {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 1.2em;
+}
+h3 {
+    font-size: 1em;
+}
+
+p {
+    margin: 0 0 1em;
+    padding: 0;
+}
+.introduction {
+    font-weight: bold;
+}
+.empty {
+    font-style: italic;
+    color: #999;
+}
+
+hr {
+    border-bottom: solid 1px #ccc;
+    border-width: 0 0 1px;
+    margin: 20px 0;
+}
+
+hr.clear {
+    clear: both;
+}
+
+ul {
+    padding: 0;
+    margin: 0 0 0 1em;
+    list-style-image: url(images/DefaultBullet.png);
+}
+ul.horizontal {
+    list-style: none none;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+}
+ul.horizontal li {
+    float: left;
+    padding-right: .7em;
+}
+
+label {
+    
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: normal;
+}
+input {
+  
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 0;
+}
+input[type=checkbox] {
+    border: none;
+    vertical-align: middle;
+    margin: 4px 2px 2px;
+    display: inline-block;
+}
+
+fieldset {
+    margin: 0 0 1em 0;
+    padding: 1em;
+}
+legend {
+    color: #666;
+}
+
+.emptyParagraph {
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+.hidden {
+    display: none;
+}
+.error {
+    color: Red;
+}
+.button, .buttonExt {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #0075b2;
+    background: #0cc url(Images/tile-button.jpg) repeat-x;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: .875em;
+    font-weight: bold;
+}
+
+table {
+    font-size: 1em;
+    border-collapse: collapse;
+}
+th {
+    text-align: left;
+}
+
+/**********************************/
+/*    Table classes for content   */
+/**********************************/
+
+table.classic {
+    border-collapse: collapse;
+    border: solid 0.1em #777777;
+}
+table.classic th {
+    border: solid 0.1em #777777;
+    background-color: #DADADA;
+    padding: 0.4em;
+}
+table.classic td {
+    border: solid 0.1em #777777;
+    padding: 0.2em 0.4em;
+}
+table.color {
+    border-collapse: collapse;
+    border: solid 0.1em #275569;
+}
+table.color th {
+    border: solid 0.1em #275569;
+    background-color: #4495b9;
+    color: White;
+    padding: 0.4em;
+}
+table.color td {
+    border: solid 0.1em #275569;
+    padding: 0.2em 0.4em;
+}
+th.highlighted, td.highlighted {
+}
+table.classic th.highlighted {
+    background-color: #AAAAAA;
+}
+table.classic td.highlighted {
+    background-color: #F0F0F0;
+}
+table.color th.highlighted {
+    background-color: #377995;
+}
+table.color td.highlighted {
+    background-color: #d1e6ef;
+}
+th.leftalignedcontent, td.leftalignedcontent {
+    text-align: left;
+}
+th.rightalignedcontent, td.rightalignedcontent {
+    text-align: right;
+}
+
+/**********************************/
+/*   Image  classes for content   */
+/**********************************/
+img.topleftfloatingimage {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+img.toprightfloatingimage {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+img.shadow {
+    -moz-box-shadow: 2px 2px 2px rgb(136, 136, 136);
+    -webkit-box-shadow: 2px 2px 2px rgb(136, 136, 136);
+    box-shadow: 2px 2px 2px rgb(136, 136, 136);
+}
+
+img.border {
+    border: solid 1px #ccc;
+    background-color: #FFF;
+    padding: 15px;
+}
+
+/************************/
+/* PAGING               */
+/************************/
+.PagingContainer {
+    text-align: center;
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-size: .875em;
+}
+.PagingContainer a {
+    padding: 1px 3px;
+    display: inline-block;
+}
+.PagingContainer .SelectedPagingItem {
+    font-weight: bold;
+}
+
+/************************/
+/* HEADER               */
+/************************/
+#HeaderArea {
+    position: relative;
+    width: 980px;
+    height: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+    background-color: #212121;
+}
+
+#Functions {
+    position: absolute;
+    top: 10px;
+    right: 1px;
+}
+
+#Functions li {
+    list-style: none none;
+    float: left;
+    margin-left: 10px;
+}
+
+#Functions a {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: .75em;
+    color: #eee;
+    display: inline-block;
+    padding: 5px 5px 5px 26px;
+    line-height: 16px;
+}
+
+#Functions .iconLink {
+    background-repeat: no-repeat;
+    background-position: 5px 50%;
+}
+
+#Functions .loginLink {
+    background-image: url(Images/icon-login.png);
+}
+
+#Functions .rssLink {
+    background-image: url(Images/icon-rss.png);
+}
+
+#Functions .sitemapLink {
+    background-image: url(Images/icon-sitemap.png);
+}
+
+#Functions .languageLink {
+    background-image: url(Images/icon-language.png);
+}
+
+/************************/
+/* MAIN MENU AREA   
+/************************/
+#MainMenuArea {
+    width: 980px;
+    margin: 0 auto;
+    clear: both;
+    overflow: hidden;
+}
+
+#MainMenu {
+    height: 50px;
+    float: left;
+    width: 724px;
+}
+
+#MainMenu ul {
+    height: 50px;
+    overflow: hidden;
+    border-left: solid 1px #b0a790;
+    margin: 0;
+}
+
+#MainMenu li {
+    float: left;
+    display: block;
+    list-style: none none;
+    border-right: solid 1px #b0a790;
+}
+
+#MainMenu li:hover {
+    background-image: url(Images/hover.png);
+    background-repeat: repeat-x;
+}
+
+#MainMenu a,
+#MainMenu span {
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1;
+    color: #7e735b;
+    padding: 17px 16px;
+}
+
+#MainMenu a:hover {
+    text-decoration: none;
+}
+
+#MainMenu .selected {
+    background-image: url(Images/selected.png);
+    background-repeat: repeat-x;
+}
+
+.QuickSearchArea {
+    float: right;
+    text-align: right;
+    padding-top: 10px;
+}
+
+.quickSearchFieldContainer {
+    background: url(Images/field-search.png) no-repeat;
+    width: 183px;
+    height: 30px;
+    float: left;
+}
+.quickSearchField {
+    background: none;
+    border: none;
+    margin: 5px 0 0 10px;
+    width: 173px;
+    height: 20px;
+    padding: 0px;
+}
+
+/*************************/
+/* STAGEAREA             */
+/*************************/
+#StageArea {
+    width: 980px;
+    margin: 24px auto 0;
+    overflow: hidden;
+}
+
+/************************/
+/* SUBMENU AREA           */
+/************************/
+#SubMenuArea {
+    float: left;
+    width: 220px;
+    margin: 77px 25px 25px 0; /* Top margin: 2x20px (breadcrumb margin) + 12px (breadcrumb font-size) + 25px (MainContent padding) */
+    overflow-x: hidden;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: .875em;
+}
+
+#SubMenuArea ul {
+    list-style: none none;
+    padding: 0;
+    margin: 0;
+}
+
+#SubMenuArea ul ul {
+    padding: 7px 0 0 13px;
+}
+
+#SubMenuArea li {
+    display: block;
+    padding: 0 0 7px;
+}
+
+#SubMenuArea span, #SubMenuArea a {
+    display: block;
+    font-weight: bold;
+    color: #666;
+}
+
+#SubMenuArea .toplevel {
+    color: #666;
+    font-size: 1.429em; /* Same as h2 */
+    font-weight: bold;
+    border-bottom: solid 1px #ccc;
+    padding: 0 3px 3px;
+    margin-bottom: 3px;
+}
+
+#SubMenuArea .selected {
+    color: #F49E46;
+}
+
+/*************************/
+/* CONTENT AREA          */
+/*************************/
+#MainContentArea {
+    float: right;
+    width: 735px;
+    overflow-x: hidden;
+}
+
+#MainBodyAreaWide {
+    background: url(Images/box-mainbody-wide.png) no-repeat;
+    padding: 25px;
+    min-height: 250px;
+    margin-bottom: 25px;
+}
+
+.BreadcrumbArea {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: .75em;
+    line-height: 1;
+    margin: 20px 0;
+}
+
+#MainBodyArea {
+    float: left;
+    overflow: visible;
+    width: 500px;
+    background: url(Images/box-mainbody.png) no-repeat;
+    min-height: 250px;
+}
+
+#MainBody {
+    padding: 25px;
+}
+
+#SecondaryBodyArea {
+    float: right;
+    width: 210px; /* 735 (MainContent) - 500 (MainBody) - 25 (Gutter) */
+    overflow-x: hidden;
+    margin: 25px 0;
+}
+
+/************************/
+/* FOOTER               */
+/************************/
+#FooterArea {
+    background-image: url(Images/tile-footer.gif);
+    background-repeat: repeat-x;
+    clear: both;
+    margin-top: 20px;
+    overflow: hidden;
+    color: #fff;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+#FooterArea a {
+    color: #fff;
+}
+
+#PageFooter {
+    width: 980px;
+    margin: 0 auto;
+}
+
+#PageFooter ul {
+    margin: 20px 0;
+    padding: 0;
+    list-style: none none;
+    overflow: hidden;
+}
+
+#PageFooter li {
+    float: left;
+    margin: 0 0 0 25px;
+    width: 225px;
+}
+
+#PageFooter li:first-child {
+    margin-left: 0;
+}
+
+#PageFooter span {
+    font-size: 1.2em;
+    display: block;
+    padding: 2px 5px;
+    border-bottom: 1px solid #fff;
+}
+
+#PageFooter ul ul {
+    margin: 5px 0;
+}
+
+#PageFooter ul ul li {
+    float: none;
+    padding: 2px 5px;
+    margin: 0;
+    font-size: 0.8em;
+}
+
+#Copyright {
+    clear: both;
+    display: block;
+    margin: 20px 0;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: .75em;
+    text-transform: uppercase;
+    zoom: 1;
+}
+
+/*************************/
+/* PAGE LIST             */
+/*************************/
+.pageList ul {
+    margin: 0 0 1em;
+    padding: 0;
+    list-style: none none;
+}
+.pageList li {
+    padding: .7em 0;
+    border-top: solid 1px #eee;
+}
+
+.pageList li:first-child,
+#SecondaryBodyArea .pageList li {
+    border-top: none;
+    padding-top: 0;
+}
+
+#SecondaryBodyArea .pageList li > h3{
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: .875em;
+    line-height: 1.3em;
+}
+.pageList li > h3 {
+    margin-bottom: .2em;
+}
+
+.pageList li > p {
+    margin-bottom: 0;
+}
+
+.pageList li > .datetime {
+    font-size: .75em;
+}
+
+.pageList li > .document {
+    display: inline-block;
+    margin-top: .5em;
+}
+
+/*************************/
+/* DOCUMENTS             */
+/*************************/
+.document {
+    padding: 0 0 2px 22px;
+    background: url(images/extensions/default.gif) 0 50% no-repeat;
+    line-height: 1.4;
+}
+.folder {
+    background-image: url(images/filemanager/folder.png);
+}
+.folderup {
+    background-image: url(images/filemanager/folderup.png);
+}
+.bmpExtension {
+    background-image: url(images/extensions/bmp.gif);
+}
+.docExtension, .docxExtension {
+    background-image: url(images/extensions/doc.gif);
+}
+.gifExtension {
+    background-image: url(images/extensions/gif.gif);
+}
+.htmExtension, .htmlExtension {
+    background-image: url(images/extensions/htm.gif);
+}
+.jpgExtension, .jpegExtension {
+    background-image: url(images/extensions/jpg.gif);
+}
+.mp3Extension {
+    background-image: url(images/extensions/mp3.gif);
+}
+.mpgExtension {
+    background-image: url(images/extensions/mpg.gif);
+}
+.pdfExtension {
+    background-image: url(images/extensions/pdf.gif);
+}
+.pngExtension {
+    background-image: url(images/extensions/png.gif);
+}
+.pptExtension, .pptxExtension {
+    background-image: url(images/extensions/ppt.gif);
+}
+.tifExtension, .tiffExtension {
+    background-image: url(images/extensions/tif.gif);
+}
+.txtExtension {
+    background-image: url(images/extensions/txt.gif);
+}
+.wavExtension {
+    background-image: url(images/extensions/wav.gif);
+}
+.xlsExtension .xlsxExtension {
+    background-image: url(images/extensions/xls.gif);
+}
+.zipExtension {
+    background-image: url(images/extensions/zip.gif);
+}
+
+/*************************/
+/* STARTPAGE             */
+/*************************/
+form.StartPage {
+    background-image: url(Images/StartPageBg.jpg);
+}
+
+#ImageArea {
+    margin-top: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+#ImageContent
+{
+    display: none; /* Only displayed for Mobile browsers */
+}
+
+form.StartPage #StageArea {
+    margin-top: 0;
+}
+
+form.StartPage #MainContentArea {
+    padding: 30px 0 0;
+    width: auto;
+}
+
+form.StartPage #MainContentArea .column {
+    float: left;
+    margin: 0 0 20px 25px;
+    padding: 25px;
+    width: 260px;
+    background: url(Images/box-startpage.png) no-repeat;
+    _background-image: url(Images/box-startpage.gif);
+    min-height: 230px;
+}
+
+form.StartPage #MainContentArea .column:first-child {
+    margin-left: 0;
+}
+
+#Clients {
+    clear: both;
+    border: 2px solid #e0e0e0;
+    border-width: 2px 0;
+    margin: 20px 0;
+}
+
+#Clients p {
+    margin: 0;
+}
+
+form.StartPage .linksArea {
+    float: left;
+    max-width: 440px;
+    padding: 25px;
+}
+
+form.StartPage .linksItemDate {
+    display: block;
+    font-style: italic;
+}
+
+form.StartPage li {
+    margin-bottom: 5px;
+}
+
+/*************************/
+/* LOGIN PAGE            */
+/*************************/
+.loginArea {
+    width: 100%;
+}
+
+.loginArea label {
+    display: block;
+    line-height: 1em;
+    width: 35%;
+}
+
+.loginArea input {
+    margin: 0.3em 0 1em 0;
+}
+
+/*************************/
+/* REGISTER PAGE         */
+/*************************/
+.registerArea {
+    width: 100%;
+}
+
+.registerArea label {
+    display: block;
+    line-height: 1em;
+}
+
+.registerArea input {
+    margin: 0.3em 0 1em 0;
+}
+
+/*************************/
+/* SUBSCRIPTION PAGE     */
+/*************************/
+.subscriptionArea {
+    width: 100%;
+}
+
+.subscriptionArea label.topLabel {
+    display: block;
+    line-height: 1em;
+}
+
+.subscriptionArea input, .subscriptionArea select {
+    margin: 0.3em 0 1.5em 0;
+}
+
+.subscriptionListArea input {
+    margin: 0 0.3em 0 0;
+}
+
+.subscriptionListArea td {
+    vertical-align: text-bottom;
+    padding: 0.3em 0;
+}
+
+/*************************/
+/* SEARCH PAGE           */
+/*************************/
+#ResultArea {
+    padding-top: 2em;
+}
+
+#ResultArea ol {
+    margin: 0;
+    padding-left: 2em;
+}
+#ResultArea li {
+    margin: 0;
+    padding: 0;
+}
+
+input.searchText {
+    height: 18px;
+    width: 335px;
+    padding: 5px;
+}
+
+/*************************/
+/* SITEMAP PAGE          */
+/*************************/
+#SiteMap ul {
+    margin: 0;
+    padding: 0.2em 0;
+    list-style-image: none;
+}
+
+#SiteMap ul ul {
+    padding: 0;
+    margin-left: 0.5em;
+}
+
+#SiteMap li {
+    margin: 0 0 0.5em 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.3em;
+}
+#SiteMap li a {
+    text-decoration: none;
+}
+
+#SiteMap li li {
+    margin: 0.2em 0;
+    padding-left: 1em;
+    background: url(images/SiteMapBullet.png) no-repeat;
+    font-size: 0.7em;
+}
+
+#SiteMap li li a {
+    text-decoration: underline;
+}
+
+#SiteMap li li li {
+    font-size: 1em;
+}
+
+/*************************/
+/* CALENDAR              */
+/*************************/
+.CalendarList {
+    margin: 10px 0;
+}
+.CalendarList h2 {
+    margin: .5em 0 .2em;
+    padding: 0 2px 2px;
+    font-size: 1em;
+    border-bottom: 1px solid #eee;
+}
+.CalendarList .event {
+    overflow: hidden;
+    padding: 2px;
+}
+.CalendarList .eventDate {
+    float: right;
+    font-size: .875em;
+}
+.CalendarList .multiDate {
+    background: url(images/Clock.png) 100% 50% no-repeat;
+    padding-right: 18px;
+}
+.CalendarList .midDate {
+    width: 16px;
+    height: 16px;
+}
+
+.CalendarGrid {
+    background-color: #fff;
+    padding: 5px;
+}
+.CalendarGrid > table {
+    width: 200px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: .75em;
+}
+.CalendarGrid .title {
+    border-bottom: 1px solid #e3e3e3;
+}
+.CalendarGrid .title td {
+    padding: 3px;
+    font-weight: bold;
+    border: none;
+}
+.CalendarGrid .title .nextPrev {
+    font-size: 18px;
+    line-height: 1;
+}
+.CalendarGrid th {
+    font-weight: normal;
+    text-align: center;
+    padding: 3px;
+}
+.CalendarGrid td {
+    text-align: center;
+    border: 1px solid #fff;
+}
+.CalendarGrid a {
+    padding: 2px 3px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.CalendarGrid .today {
+    font-weight: bold;
+    outline: solid 1px #F49E46;
+    outline-offset: -2px;
+}
+.CalendarGrid .active {
+    background-color: #e0e0e0;
+}
+
+/*************************/
+/* FORUMS                */
+/*************************/
+.Forum .moderatorPanel {
+    margin-bottom: 10px;
+}
+.Forum .buttonToolbar {
+    float: right;
+    margin-bottom: 5px;
+    zoom: 1;
+}
+.Forum .linkButton {
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-size: .875em;
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    line-height: 16px;
+}
+.Forum .buttonToolbar .linkButton {
+    margin-left: 5px;
+}
+.Forum .createButton {
+    background-image: url(Images/Add.png);
+}
+.Forum .editButton {
+    background-image: url(Images/Edit.png);
+}
+.Forum .deleteButton {
+    background-image: url(Images/Delete.png);
+}
+.Forum .stickyButton {
+    background-image: url(Images/forum/sticky.png);
+}
+.Forum .lockButton {
+    background-image: url(Images/forum/lock.png);
+}
+.Forum .upButton {
+    background-image: url(Images/forum/up.png);
+}
+.Forum .inviteButton {
+    background-image: url(Images/Invite.png);
+}
+.forumTable {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.forumTable td, .forumTable th {
+    font-family: Arial, Helvetica, Sans-Serif;
+    padding: 5px 8px;
+    font-size: .875em;
+}
+.forumTable th {
+    font-weight: normal;
+    border-bottom: 1px solid #dcdcdc;
+    white-space: nowrap;
+}
+.forumTable th.title {
+    width: 50%;
+}
+.forumTable th.replies, .forumTable td.replies {
+    text-align: right;
+}
+.forumTable td.info {
+    width: 20%;
+}
+.forumTable tr.even td {
+    background-color: #ebf0f3;
+}
+.forumTable a.forumLink {
+    display: block;
+    background: url(images/forum/default.png) no-repeat 0 50%;
+    padding: 0 0 0 32px;
+    line-height: 24px;
+}
+.forumTable a.information {
+    background-image: url(images/forum/Information.png);
+}
+.forumTable a.auction {
+    background-image: url(images/forum/Auction.png);
+}
+.forumTable a.threadLink {
+    display: block;
+}
+.forumTable a.sticky {
+    background: url(images/forum/sticky.png) no-repeat 100% 50%;
+    padding: 0 24px 0 0;
+}
+.forumTable a.locked {
+    background: url(images/forum/lock.png) no-repeat 100% 50%;
+    padding: 0 24px 0 0;
+}
+.forumTable a.stickylocked {
+    background: url(images/forum/stickylocked.png) no-repeat 100% 50%;
+    padding: 0 40px 0 0;
+}
+.createForum div, .createThread div, .createReply div {
+    margin-bottom: 0.8em;
+    clear: both;
+}
+.createForum label, .createThread label, .createReply label {
+    display: block;
+    float: left;
+    width: 180px;
+    text-align: right;
+    margin: 2px 10px 0 0;
+}
+.createThread label {
+    width: 120px;
+}
+.createReply label {
+    width: 80px;
+}
+.createForum input.title, .createThread input.title, .createThread textarea, .createThread div.text {
+    width: 400px;
+}
+.createThread div.buttons {
+    margin-left: 130px;
+}
+.createReply textarea, .createReply div.text {
+    width: 680px;
+}
+.createForum div.buttons {
+    padding-left: 190px;
+    text-align: left;
+}
+.createReply div.buttons {
+    margin-left: 90px;
+}
+
+.Forum .replyList {
+    list-style: none none;
+    margin: 0;
+    overflow: hidden;
+}
+.Forum .reply {
+    margin: 0 0 20px 0;
+    overflow: hidden;
+    background: url(images/forum/replybg.png) repeat-y 480px;
+}
+.Forum .reply .text {
+    float: left;
+    width: 455px;
+    padding: 5px 25px 10px 0;
+}
+.Forum .reply .info {
+    float: left;
+    width: 165px;
+    padding: 5px 10px 10px 25px;
+}
+.Forum .reply .info .linkButton {
+    display: block;
+    margin-top: 5px;
+}
+
+/*************************/
+/* BLOG                  */
+/*************************/
+.bloggerThumbnail {
+    float: left;
+    width: 75px;
+    padding: 7px;
+    border: 1px solid #dcdcdc;
+    background-color: White;
+    display: block;
+    margin: 0 7px 1px 0;
+}
+.bloggerImage {
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    background-color: White;   
+}
+.blogItem {
+    width: 100%;
+    overflow: hidden;
+}
+
+.blogItem .bloggerDivLink {
+    padding: 0 5px;
+    display: block;
+}
+
+.blogItem h2 {
+    margin: 0.1em 0 0.1em 0;
+    display: block;
+    
+  
+}
+.blogItem span.bloginfo {
+    margin: 0.1em 0 0.2em 0;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    font-weight: normal;
+    display: block; 
+}
+.blogItem span.introduction 
+{
+    margin: 0;
+    font-size: 1.0em;
+    line-height: 1.5em;
+    display: block; 
+    font-weight: bold;
+}
+.blogItem span.name {
+    margin: 0.1em 0 0.2em 0;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    font-weight: normal;
+    display: inline-block;
+   
+}
+.blogItem p {
+    margin: 0.6em 0 0.2em 0;
+}
+
+.blogItem span a {
+    font-style: normal;
+}
+
+/* Tag links */
+.tags {
+    overflow: hidden;
+}
+
+.tags span {
+    float: left;
+    line-height: 1.2em;
+}
+
+.tags ul 
+{
+    
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.tags li {
+  
+    list-style: none;
+    list-style-image: none;
+    float: left;
+    margin-left: 0.5em;
+}
+
+.tags li a
+{
+    line-height: 1.2em;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+}
+
+/* Tag cloud */
+ul.tagCloud {
+    margin: 0;
+    padding: 0;
+}
+
+ul.tagCloud li {
+    display: inline;
+    list-style: none;
+    list-style-image: none;
+    margin: 0 0.4em 0 0;
+    vertical-align: baseline;
+}
+
+ul.tagCloud h1, ul.tagCloud h2, ul.tagCloud h3, ul.tagCloud h4, ul.tagCloud h5, ul.tagCloud h6 {
+    display: inline;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+ 
+}
+ul.tagCloud h1 {
+    font-size: 1.2em;
+    font-weight: 900;
+}
+ul.tagCloud h2 {
+    font-size: 1em;
+    font-weight: 700;
+}
+ul.tagCloud h3 {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+ul.tagCloud h4 {
+    font-size: 0.8em;
+    font-weight: 400;
+}
+ul.tagCloud h5 {
+    font-size: 0.7em;
+    font-weight: 200;
+}
+ul.tagCloud h6 {
+    font-size: 0.6em;
+    font-weight: 100;
+}
+
+/* Date archive */
+div.dateTree {
+   
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+div.dateTree ul {
+    padding: 0;
+    margin: 0;
+}
+div.dateTree ul ul {
+    margin: 0 0 0 1em;
+}
+
+div.dateTree li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+}
+
+/* Comments */
+ol.comments {
+    padding: 0;
+    margin: 0 0 1.5em;
+    list-style-type: none;
+}
+ol.comments li.comment {
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+    border-bottom: solid 1px #ccc;
+}
+ol.comments .footer {
+    margin-top: 0.4em;
+    text-align: right;
+}
+ol.comments .footer .commentinfo {
+    display: block;
+    margin: .5em 0 .2em;
+    font-weight: bold;
+}
+ol.comments .footer a {
+    font-style: normal;
+}
+ol.comments img, .newsBody img, .eventBody img, div.WRbody img, div.text img {
+    padding: 0.5em;
+    background: #fff;
+    border: solid 1px #dcdcdc;
+}
+
+ol.comments img {
+    max-width: 27.1em;
+}
+.newsBody img, div.WRbody img, div.text img {
+    max-width: 31em;
+}
+.eventBody img {
+    width: 22em;
+}
+* html ol.comments img, ol.comments p {
+    width: expression(this.clientWidth > 217? "21.7em": "auto");
+}
+
+* html .newsBody img, div.WRbody img, div.text img, .newsBody p, div.WRbody p, div.text p {
+    width: expression(this.clientWidth > 310? "31em": "auto");
+}
+
+* html .eventBody img, .eventBody p {
+    width: expression(this.clientWidth > 220? "22em": "auto");
+}
+
+.WRnote {
+    display: block;
+    margin: 1.5em 0;
+    padding-left: 0.5em;
+    color: #e99636;
+}
+
+/* Post comment */
+fieldset.comment ul {
+    /* Validation summary */
+   
+    font-style: normal;
+    font-size: 0.8em;
+    background-color: #eeeeee;
+    margin: 1em 0;
+    padding: 1em;
+}
+fieldset.comment li {
+    margin-left: 1.4em;
+    list-style-image: none;
+    margin-bottom: 0.7em;
+    padding: 0;
+}
+fieldset.comment input, fieldset.comment textarea {
+    display: block;
+}
+fieldset.comment input.textinput, fieldset.comment textarea {
+    width: 325px;
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+}
+fieldset.comment textarea {
+    height: 140px;
+}
+
+/*************************/
+/* CAPTCHA               */
+/*************************/
+fieldset.captcha {
+    margin-top: 1em;
+    padding: 0;
+    border: 0;
+}
+fieldset.captcha legend {
+    display: none;
+}
+fieldset.captcha label {
+    float: left;
+    margin-right: 0.5em;
+    margin-bottom: 0.7em;
+    width: 115px;
+}
+fieldset.captcha img {
+    float: left;
+    margin-bottom: 0.7em;
+    padding-left: 0.5em;
+}
+fieldset.captcha input {
+    clear: both;
+    width: 325px;
+}
+fieldset.captcha span {
+    /* validator */
+    float: right;
+}
+
+/*************************/
+/* MY SETTTINGS          */
+/*************************/
+.mySettingsForm {
+    margin-top: 1em;
+    width: 360px;
+}
+.mySettingsForm div {
+    overflow: hidden;
+    margin-bottom: 0.4em;
+    _zoom: 1;
+}
+.mySettingsForm div label {
+    float: left;
+    clear: left;
+}
+.mySettingsForm div input {
+    float: right;
+    width: 200px;
+}
+.mySettingsForm div.buttons input {
+    float: left;
+    width: auto;
+    clear: both;
+}
+.mySettingsForm div div {
+    float: right;
+}
+
+/*************************/
+/* Google maps           */
+/*************************/
+.MapContainer {
+    overflow: hidden;
+}
+
+/*************************/
+/* FORMS                 */
+/*************************/
+.xForm h2 {
+    padding: 1em 0;
+    margin: 0;
+}
+.xForm .heading {
+    font-weight: bold;
+    font-size: 1em;
+    padding: 0;
+    margin: 0.4em 0em;
+}
+.xForm #id_matrix {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.xForm #id_matrix td {
+    border: 0;
+    margin: 0;
+    padding: 0.2em 0;
+}
+span.xformvalidator {
+    color: Red;
+}
+.xForm input, .xForm .options {
+    float: left;
+}
+.xForm fieldset {
+    border: 1px solid #cdcdcd;
+}
+.xForm legend {
+    color: #666;
+    padding: 10px 5px;
+}
+.xForm label {
+    line-height: 1.7em;
+    margin-right: 0.5em;
+    float: left;
+    width: 120px;
+    font-weight: bold;
+}
+#id_matrix br {
+    clear: both;
+}
+.thankyoumessage {
+    padding: 1em 0;
+    margin: 0;
+    font-weight: bold;
+}
+.xForm input.value, .xForm textarea.textbox 
+{
+    padding-top: 5px;
+    width: 200px;
+}
+/**********************************/
+/*   Reseller                     */
+/**********************************/
+
+#MainBody #Reseller span {
+    display:block;
+    width: 100%;
+    overflow:hidden;
+    padding-top: 0.2em;
+}
+
+#MainBody #Reseller span.introduction {
+    padding-top: 0.4em;
+}
+
+/**********************************/
+/*   File Manager                 */
+/**********************************/
+
+div.filemanager {
+}
+
+.filetree {
+    margin-top: .6em;
+    margin-bottom: 1em;
+}
+
+.filetree td {
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+}
+
+.filetree td a {
+    padding: .1em .2em;
+}
+
+.filetree td.selectednode a {
+    font-weight: bold;
+}
+
+/**********************************/
+/*   File Manager Control         */
+/**********************************/
+div.filemanagercontrol {
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+}
+div.filemanagercontrol h1, div.filemanagercontrol h2, div.filemanagercontrol h3, div.filemanagercontrol h4 {
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+}
+div.filemanagercontrol h1 {
+    font-weight: normal;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    padding: 0;
+    margin: 0.3em 0em 0.2em 0em;
+}
+div.filemanagercontrol h2 {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 0;
+    margin: 0.2em 0em;
+}
+div.filemanagercontrol h3 {
+    font-weight: bold;
+    font-size: 1em;
+    padding: 0;
+    margin: 0.4em 0em;
+}
+div.filemanagercontrol h4 {
+    font-weight: normal;
+    font-size: 0.9em;
+    padding: 0;
+    margin: 0.4em 0em;
+}
+div.filemanagercontrol p {
+    margin: 0.3em 0em 0.4em 0;
+}
+div.filemanagercontrol fieldset {
+    margin: -0.5em 0.8em 1em 0.2em;
+}
+div.filemanagercontrol label {
+    display: block;
+    padding-top: 0.3em;
+    float: left;
+    width: 7em;
+}
+div.filemanagercontrol .toolbar {
+    background: #F9F9F9;
+    border: 1px solid #DCDCDC;
+    border-bottom: 0;
+    padding: 7px;
+}
+div.filemanagercontrol .toolbarbuttonarea {
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 0.1em;
+    clear: both;
+    text-align: center;
+}
+div.filemanagercontrol .toolbarbuttonsectionleft, div.filemanagercontrol .toolbarbuttonsectionright {
+    overflow: hidden;
+    float: left;
+}
+div.filemanagercontrol .toolbarbuttonsectionleft {
+    padding-right: 0.3em;
+    margin-right: 0.3em;
+    border-right: dotted 1px #aaa;
+}
+div.filemanagercontrol .toolbarbuttonsectionright {
+    padding-left: 0.3em;
+    margin-left: 0.3em;
+    border-left: dotted 1px #aaa;
+}
+div.filemanagercontrol .toolbarmessage {
+    margin-left: 0.4em;
+    color: #F49E46;
+}
+div.filemanagercontrol .crumbs {
+    color: #398ac9;
+    font-size: 0.9em;
+    background: #F9F9F9;
+    border: 1px solid #DCDCDC;
+    border-bottom: 0;
+    padding: 0.3em;
+    padding-left: 1.1em;
+}
+div.filemanagercontrol .validator ul {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0;
+    margin-left: 0.4em;
+    padding: 0;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+div.filemanagercontrol .body {
+    border: 1px solid #DCDCDC;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+div.filemanagercontrol .body .leftpanel, div.filemanagercontrol .body .rightpanel {
+    overflow: auto;
+    padding-top: 0.7em;
+}
+div.filemanagercontrol .body .leftpanel {
+    float: left;
+    width: 23%;
+    border-right: 1px solid #DCDCDC;
+}
+div.filemanagercontrol .body .rightpanel {
+    width: 100%;
+}
+
+div.filemanagercontrol a {
+    text-decoration: none;
+    color: #3e3e3e;
+    border: 0;
+}
+
+div.filemanagercontrol .toolbar a {
+    font-family: Helvetica, "Trebuchet MS" , Verdana, Arial, Sans-Serif;
+    text-decoration: none;
+    color: #3e3e3e;
+    border: 0;
+    min-width: 3.8em;
+}
+
+* html div.filemanagercontrol .toolbar a {
+    font-family: Helvetica, "Trebuchet MS" , Verdana, Arial, Sans-Serif;
+    text-decoration: none;
+    color: #3e3e3e;
+    border: 0;
+    width: 4.1em;
+}
+
+/* --------------- */
+/* ToolBar BUTTONS */
+/* --------------- */
+
+div.filemanagercontrol .toolbar a[disabled="disabled"], div.filemanagercontrol .toolbar a:hover.addfile_dis, div.filemanagercontrol .toolbar a:hover.addfolder_dis, div.filemanagercontrol .toolbar a:hover.copy_dis, div.filemanagercontrol .toolbar a:hover.cut_dis, div.filemanagercontrol .toolbar a:hover.checkin_dis, div.filemanagercontrol .toolbar a:hover.checkout_dis, div.filemanagercontrol .toolbar a:hover.undocheckout_dis, div.filemanagercontrol .toolbar a:hover.delete_dis, div.filemanagercontrol .toolbar a:hover.details_dis, div.filemanagercontrol .toolbar a:hover.paste_dis, div.filemanagercontrol .toolbar a:hover.rename_dis, div.filemanagercontrol .toolbar a:hover.version_dis {
+    color: #888;
+    text-decoration: none;
+    border: 0;
+}
+
+.toolbar a.addfile_dis, .toolbar a.addfolder_dis, .toolbar a.copy_dis, .toolbar a.cut_dis, .toolbar a.checkin_dis, .toolbar a.checkout_dis, .toolbar a.undocheckout_dis, .toolbar a.delete_dis, .toolbar a.details_dis, .toolbar a.paste_dis, .toolbar a.rename_dis, .toolbar a.version_dis {
+    color: #888;
+    display: block;
+    float: left;
+    background-position: top center;
+    background-repeat: no-repeat;
+    font-size: 0.7em;
+    line-height: 1.6em;
+    text-align: center;
+    padding-top: 18px;
+    margin: 0 0.4em;
+    text-decoration: none;
+    border: 0;
+}
+
+div.filemanagercontrol a:hover {
+    color: #000;
+    text-decoration: none;
+    border-bottom: dotted 1px #888;
+    background-color: transparent;
+}
+
+.toolbar a.addfile, .toolbar a.addfolder, .toolbar a.copy, .toolbar a.cut, .toolbar a.checkin, .toolbar a.checkout, .toolbar a.undocheckout, .toolbar a.delete, .toolbar a.details, .toolbar a.paste, .toolbar a.rename, .toolbar a.version {
+    display: block;
+    float: left;
+    background-position: top center;
+    background-repeat: no-repeat;
+    font-size: 0.7em;
+    line-height: 1.6em;
+    text-align: center;
+    padding-top: 18px;
+    margin: 0 0.4em;
+    color: #000;
+    border: 0;
+}
+
+* html .toolbar a {
+    letter-spacing: -0.1em;
+}
+
+div.filemanagercontrol .toolbar a:hover {
+    color: #f49e46;
+    background-color: Transparent;
+    text-decoration: none;
+    border: 0;
+}
+
+
+div.filemanagercontrol a.addfile {
+    background-image: url(images/filemanager/buttonaddfile_off.png);
+}
+div.filemanagercontrol a.addfolder {
+    background-image: url(images/filemanager/buttonaddfolder_off.png);
+}
+div.filemanagercontrol a.copy {
+    background-image: url(images/filemanager/buttoncopy_off.png);
+}
+div.filemanagercontrol a.cut {
+    background-image: url(images/filemanager/buttoncut_off.png);
+}
+div.filemanagercontrol a.checkin {
+    background-image: url(images/filemanager/buttoncheckin_off.png);
+}
+div.filemanagercontrol a.checkout {
+    background-image: url(images/filemanager/buttoncheckout_off.png);
+}
+div.filemanagercontrol a.undocheckout {
+    background-image: url(images/filemanager/buttonundocheckout_off.png);
+}
+div.filemanagercontrol a.delete {
+    background-image: url(images/filemanager/buttondelete_off.png);
+}
+div.filemanagercontrol a.details {
+    background-image: url(images/filemanager/buttondetails_off.png);
+}
+div.filemanagercontrol a.paste {
+    background-image: url(images/filemanager/buttonpaste_off.png);
+}
+div.filemanagercontrol a.rename {
+    background-image: url(images/filemanager/buttonrename_off.png);
+}
+div.filemanagercontrol a.view {
+    background-image: url(images/filemanager/buttonview_off.png);
+}
+div.filemanagercontrol a.version {
+    background-image: url(images/filemanager/buttonversion_off.png);
+}
+div.filemanagercontrol a:hover.addfile {
+    background-image: url(images/filemanager/buttonaddfile_on.png);
+}
+div.filemanagercontrol a:hover.addfolder {
+    background-image: url(images/filemanager/buttonaddfolder_on.png);
+}
+div.filemanagercontrol a:hover.copy {
+    background-image: url(images/filemanager/buttoncopy_on.png);
+}
+div.filemanagercontrol a:hover.cut {
+    background-image: url(images/filemanager/buttoncut_on.png);
+}
+div.filemanagercontrol a:hover.checkin {
+    background-image: url(images/filemanager/buttoncheckin_on.png);
+}
+div.filemanagercontrol a:hover.checkout {
+    background-image: url(images/filemanager/buttoncheckout_on.png);
+}
+div.filemanagercontrol a:hover.undocheckout {
+    background-image: url(images/filemanager/buttonundocheckout_on.png);
+}
+div.filemanagercontrol a:hover.delete {
+    background-image: url(images/filemanager/buttondelete_on.png);
+}
+div.filemanagercontrol a:hover.details {
+    background-image: url(images/filemanager/buttondetails_on.png);
+}
+div.filemanagercontrol a:hover.paste {
+    background-image: url(images/filemanager/buttonpaste_on.png);
+}
+div.filemanagercontrol a:hover.rename {
+    background-image: url(images/filemanager/buttonrename_on.png);
+}
+div.filemanagercontrol a:hover.view {
+    background-image: url(images/filemanager/buttonview_on.png);
+}
+div.filemanagercontrol a:hover.version {
+    background-image: url(images/filemanager/buttonversion_on.png);
+}
+
+
+div.filemanagercontrol a.addfile_dis {
+    background-image: url(images/filemanager/buttonaddfile_dis.png);
+}
+div.filemanagercontrol a.addfolder_dis {
+    background-image: url(images/filemanager/buttonaddfolder_dis.png);
+}
+div.filemanagercontrol a.copy_dis {
+    background-image: url(images/filemanager/buttoncopy_dis.png);
+}
+div.filemanagercontrol a.cut_dis {
+    background-image: url(images/filemanager/buttoncut_dis.png);
+}
+div.filemanagercontrol a.checkin_dis {
+    background-image: url(images/filemanager/buttoncheckin_dis.png);
+}
+div.filemanagercontrol a.checkout_dis {
+    background-image: url(images/filemanager/buttoncheckout_dis.png);
+}
+div.filemanagercontrol a.undocheckout_dis {
+    background-image: url(images/filemanager/buttonundocheckout_dis.png);
+}
+div.filemanagercontrol a.delete_dis {
+    background-image: url(images/filemanager/buttondelete_dis.png);
+}
+div.filemanagercontrol a.details_dis {
+    background-image: url(images/filemanager/buttondetails_dis.png);
+}
+div.filemanagercontrol a.paste_dis {
+    background-image: url(images/filemanager/buttonpaste_dis.png);
+}
+div.filemanagercontrol a.rename_dis {
+    background-image: url(images/filemanager/buttonrename_dis.png);
+}
+div.filemanagercontrol a.view_dis {
+    background-image: url(images/filemanager/buttonview_dis.png);
+}
+div.filemanagercontrol a.version_dis {
+    background-image: url(images/filemanager/buttonversion_dis.png);
+}
+
+div.filemanagercontrol table.fileList {
+    width: 98%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+div.filemanagercontrol table.fileList tr.selected {
+    background-color: #eee;
+}
+
+div.filemanagercontrol .fileList th {
+    border-bottom: 1px solid #DCDCDC;
+    padding: 0 1em 0.3em 1em;
+}
+
+div.filemanagercontrol .fileList th a, div.filemanagercontrol .crumbs a {
+    border-bottom: dotted 1px #888;
+}
+
+div.filemanagercontrol .fileList th a:hover, div.filemanagercontrol .crumbs a:hover {
+    border-bottom: none;
+}
+div.filemanagercontrol .fileList td {
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    font-size: 0.9em;
+    padding-top: 0.5em;
+    padding-left: 15px;
+}
+div.filemanagercontrol .fileList td a {
+    padding: 3px 0 2px 20px;
+    line-height: 1.4em;
+}
+div.filemanagercontrol ul.documentList {
+    list-style-type: none;
+    list-style-image: none;
+    margin-bottom: 1em;
+    font-family: Helvetica, Tahoma, Arial, Sans-Serif;
+    font-size: 0.9em;
+    padding-top: 0.3em;
+}
+
+/* Changed Pages */
+
+td.changed {
+    padding-right: 0.7em;
+}
+
+/* File summary css styling */
+/* Applied to override what is in the filesummary.config */
+
+
+div.filemanagercontrol .editfilesummary p {
+    padding-left: 20.3em;
+}
+div.filemanagercontrol fieldset.editfilesummary fieldset {
+    margin-top: 0.2em;
+}
+div.filemanagercontrol fieldset.editfilesummary label {
+    float: none;
+    display: inline;
+    width: auto;
+}
+div.filemanagercontrol fieldset.editfilesummary td {
+    vertical-align: top;
+    padding-top: 0.3em;
+    width: 20em;
+}
+
+div.filemanagercontrol fieldset.editfilesummary a {
+    cursor: text;
+    text-decoration: none;
+    color: #666;
+}
+
+div.filemanagercontrol fieldset.editfilesummary a:hover {
+    background: none;
+}
+
+.sort {
+    padding: 0 0 2px 14px;
+    line-height: 1.2em;
+    font-size: 0.8em;
+}
+
+.Ascending {
+    background-image: url(images/Filemanager/ascending.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 0 0 2px 14px;
+    line-height: 1.2em;
+}
+.Descending {
+    background-image: url(images/Filemanager/descending.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 0 0 2px 14px;
+    line-height: 1.2em;
+}

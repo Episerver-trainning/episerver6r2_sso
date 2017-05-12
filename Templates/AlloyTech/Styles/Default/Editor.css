@@ -1,0 +1,99 @@
+/* ------ Text items -------- */
+body 
+{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #666;
+    margin: 0;
+    padding: 0;
+}
+a img 
+{
+    border: 0;
+}
+p 
+{
+    margin: 0 0 1em;
+    padding: 0;
+}
+a:link:-moz-read-write {
+    color: #398ac9 !important;
+    text-decoration: none !important;
+}
+a {
+    color: #398ac9;
+    text-decoration: none;
+    background-color: Transparent;
+}
+body.epi_visualaid a 
+{
+    background-color: Transparent;
+    text-decoration: underline;
+}
+h1, h2, h3, h4 
+{
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: normal;
+    margin: 0 0 .5em;
+}
+h1 
+{
+    font-size: 1.625em;
+}
+h2 
+{
+    font-size: 1.25em;
+    EditMenuName: Heading 2;
+}
+h3 
+{
+    font-size: 1em;
+    EditMenuName: Heading 3;
+}
+.introduction
+{
+	font-weight: bold;
+	EditMenuName: Introduction;
+}
+hr
+{
+	margin: 0.5em 0;
+	height: 1px;
+	padding: 0;
+	background:#d7d7d7;
+	color: #d7d7d7;
+	border:0;
+}
+ul 
+{
+    padding: 0;
+    margin: 0 0 0 1em;
+    list-style-image: url(images/DefaultBullet.png);
+}
+hr 
+{
+    border-bottom: solid 1px #ccc;
+    border-width: 0 0 1px;
+    margin: 20px 0;
+}
+
+/* --------- Table format ----------- */
+table 
+{
+    font-size: 1em;
+    border-collapse: collapse;
+}
+th 
+{
+    text-align: left;
+}
+
+/* --------- Image style ----------- */
+img.border
+{
+    border: solid 1px #ccc;
+    background-color: #FFF;
+    padding: 15px;
+    EditMenuName: Image Border;
+}

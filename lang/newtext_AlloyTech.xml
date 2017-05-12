@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="English" id="en">
+    <pagetypes>
+      <pagetype name="[AlloyTech] Company Facts">
+        <description>Container used for company facts as dynamic content</description>
+        <name>[AlloyTech] Company Facts</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Listing">
+        <description>Shows page summary</description>
+        <name>[AlloyTech] Listing</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Notification Email">
+        <description>Notification E-mail Template</description>
+        <name>[AlloyTech] Notification E-mail</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] User profile">
+        <description>User profile</description>
+        <name>[AlloyTech] User profile</name>
+      </pagetype>
+    </pagetypes>
+  </language>
+  <language name="Svenska" id="sv">
+    <pagetypes>
+      <pagetype name="[AlloyTech] Company Facts">
+        <description>Behållare som används som företagsfakta genom dynamiskt innehåll</description>
+        <name>[AlloyTech] Företagsfakta</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Listing">
+        <description>Visa sidsammanställning</description>
+        <name>[AlloyTech] Listningssida</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Notification Email">
+        <description>Mall för notifierings-epost</description>
+        <name>[AlloyTech] Notifierings-epost</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] User profile">
+        <description>Användarprofil</description>
+        <name>[AlloyTech] Användarprofil</name>
+      </pagetype>
+    </pagetypes>
+  </language>
+</languages>

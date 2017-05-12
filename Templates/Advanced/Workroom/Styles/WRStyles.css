@@ -1,0 +1,233 @@
+.caution {
+    color: #e99636;
+}
+
+/*************************/
+/* GENERAL WORKROOM      */
+/*************************/
+.WR .buttonToolbar {
+    float: right;
+    margin-bottom: 5px;
+}
+.WR .linkButton {
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-size: .875em;
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    line-height: 16px;
+}
+.WR .editButton {
+    background-image: url(../../../AlloyTech/Styles/Default/Images/edit.png);
+}
+
+.WR .deleteButton {
+    background-image: url(../../../AlloyTech/Styles/Default/Images/delete.png);
+}
+
+.WR .createButton{
+    background-image: url(../../../AlloyTech/Styles/Default/Images/add.png);
+}
+
+.WR .buttons {
+    margin: .5em 0;
+}
+
+/*************************/
+/* WORKROOM LIST         */
+/*************************/
+ul.workroomList {
+    list-style: none none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.workroomList li {
+    margin: 0 0 10px;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul.workroomList li a {
+    line-height: 32px;
+}
+
+ul.workroomList li img {
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+    float: left;
+}
+
+.createWorkroom label {
+    display: block;
+}
+
+.createWorkroom input.name {
+    width: 300px;
+}
+
+.createWorkroom > div {
+    margin-bottom: .5em;
+}
+
+.createWorkroom .templateDescription {
+    display: block;
+    margin: 0.5em 0;
+}
+
+/*************************
+ * GENERIC LIST            
+/*************************/
+.WRList {
+    margin-bottom: 10px;
+}
+.WRList ul {
+    list-style: none none;
+    margin: 0;
+    padding: 0;
+}
+
+.WRList li {
+    margin: 0;
+    padding: 0 0 .5em;
+}
+
+.WRList li h3 {
+    margin: 0;
+}
+
+.WRList li .datetime {
+    margin: 0;
+    font-size: .875em;
+    display: block;
+}
+
+/*************************/
+/* NEWS LIST             */
+/*************************/
+.WRNewsList p {
+    margin: 0;
+}
+
+/*************************/
+/* FILE LIST             */
+/*************************/
+.WRFileList li {
+    margin: 0;
+    padding: 5px 2px;
+    border-top: solid 1px #eee;
+}
+
+.WRFileList li:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+.WRFileList li .datetime {
+    margin-left: 22px;
+}
+
+/*************************/
+/* NEWS ROOT             */
+/*************************/
+.WRNewsRoot ul {
+    list-style: none none;
+    margin: 0;
+    padding: 0;
+}
+
+.WRNewsRoot li {
+    margin: 0 0 20px;
+    padding: 0;
+}
+
+.WRNewsRoot li h2 {
+    margin: 0;
+}
+
+.WRNewsRoot li li {
+    margin: 0 0 5px;
+}
+
+.WRNewsRoot li li .datetime {
+    margin-right: 5px;
+}
+
+/*************************/
+/* NEWS LIST PAGE        */
+/*************************/
+.createNews div {
+    margin-bottom: .5em;
+}
+.createNews input.name {
+    width: 400px;
+}
+
+/*************************/
+/* CALENDAR LIST         */
+/*************************/
+.WRCalendarList ul {
+    list-style: none none;
+    margin: 0;
+    padding: 0;
+}
+
+.WRCalendarList li {
+    margin: 0 0 20px;
+    padding: 0;
+}
+
+.WRCalendarList li h2 {
+    margin: 0;
+}
+
+.WRCalendarList li li {
+    margin: 0 0 5px;
+}
+
+.WRCalendarList li li .datetime {
+    margin-right: 5px;
+}
+
+/*************************/
+/* MEMBERSHIP ADMIN      */
+/*************************/
+.WRMembershipAdmin table.members {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.WRMembershipAdmin table.members td, .WRMembershipAdmin table.members th {
+    font-family: Arial, Helvetica, Sans-Serif;
+    padding: 5px 8px;
+    font-size: .875em;
+    border-width: 0;
+}
+.WRMembershipAdmin table.members th {
+    font-weight: bold;
+    border-bottom: 1px solid #dcdcdc;
+    white-space: nowrap;
+}
+.WRMembershipAdmin table.members tr.even td {
+    background-color: #ebf0f3;
+    border-width: 0;
+}
+.WRMembershipAdmin .sendNotificationsConfirmation {
+    margin: 0 0 .5em;
+}
+.WRMembershipAdmin .searchDialog label {
+    float: left;
+    width: 180px;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 1.6;
+}
+.WRMembershipAdmin .searchDialog .message {
+    display: block;
+    margin: 0 0 .8em;
+}
+.WRMembershipAdmin .searchDialog div {
+    margin-bottom: .8em;
+}
+.WRMembershipAdmin .searchDialog .buttons {
+    margin: 0 0 0 190px;
+}
