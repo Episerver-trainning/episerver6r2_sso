@@ -168,5 +168,15 @@ namespace EPiServer.Templates
         {
             return base.GetDefaultDocuments(url);
         }
+
+        protected override void Global_PreRequestHandlerExecute(object sender, EventArgs e)
+        {
+            base.Global_PreRequestHandlerExecute(sender, e);
+        }
+
+        void Application_Error(object sender, EventArgs e)
+        {
+
+        }
     }
 }
