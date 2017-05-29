@@ -13,6 +13,7 @@ using System.Linq;
 using System.Web.Security;
 using System.Web;
 using Microsoft.Owin.Host.SystemWeb;
+using System.Configuration;
 
 [assembly: OwinStartup(typeof(EPiServer.Startup))]
 
@@ -21,6 +22,10 @@ namespace EPiServer
     public class Startup
     {
         const string LogoutUrl = "/util/logout.aspx";
+
+        private static string realm = ConfigurationManager.AppSettings["ida:Wtrealm"];
+
+        private static string adfsMetadata = ConfigurationManager.AppSettings["ida:ADFSMetadata"];
 
         public void Configuration(IAppBuilder app)
         {
@@ -36,9 +41,9 @@ namespace EPiServer
             app.UseWsFederationAuthentication(new WsFederationAuthenticationOptions()
             {                
                 //Trusted URL to federation server meta data
-                MetadataAddress = "https://adfs.bisnode.com/FederationMetadata/2007-06/FederationMetadata.xml",
+                MetadataAddress = adfsMetadata,
                 //Value of Wtreal must *exactly* match what is configured in the federation server
-                Wtrealm = "https://bisnodeintranet.local/",
+                Wtrealm = realm,
                 //CallbackPath = new PathString("/SSO/LoginCallBack.aspx"),
                 Notifications = new WsFederationAuthenticationNotifications()
                 {                                        

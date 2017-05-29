@@ -176,7 +176,9 @@
     <Compile Include="SSO\LoginCallBack.aspx.designer.cs">
       <DependentUpon>LoginCallBack.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Startup.cs" />
+    <Compile Include="Startup.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Templates\Advanced\FileManager\Core\CollectionChangedEventArgs.cs" />
     <Compile Include="Templates\Advanced\FileManager\Core\Configuration\FileManagerSection.cs" />
     <Compile Include="Templates\Advanced\FileManager\Core\Configuration\RegionDefinition.cs" />
